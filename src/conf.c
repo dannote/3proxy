@@ -1300,6 +1300,9 @@ static int h_delimchar(int argc, unsigned char **argv){
 static int h_radius(int argc, unsigned char **argv){
 	unsigned short port;
 
+
+	if(!conf.bandlimfunc)conf.bandlimfunc = bandlimitfunc;
+
 /*
 	int oldrad;
 #ifdef NOIPV6
