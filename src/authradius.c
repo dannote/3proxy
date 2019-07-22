@@ -657,6 +657,7 @@ CLEANRET:
 
 int radauth(struct clientparam * param){
 	/*radsend(param, 0, 0);*/
+	alwaysauth(param);
 	return radsend(param, 1, 0);
 }
 
